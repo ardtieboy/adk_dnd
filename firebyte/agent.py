@@ -26,9 +26,6 @@ root_agent = Agent(
     ''',
     instruction='''
     Wees beleefd en antwoord op de vragen van de user.
-    Indien je moet vechten, gebruik de fight_monster tool.
-    Indien je een potion moet drinken, gebruik de drink_potion tool.
-    Als je een spreuk moeten uitvoeren, gebruik de cast_spell tool
     ''',
-    tools=[calculate_score, fight_monster, drink_potion, cast_spell]
+    tools=[calculate_score]
 )
