@@ -1,8 +1,6 @@
 from typing import Tuple
 import random
 
-POTION_HP = 3
-
 def fight_monster(health: int, number_of_monsters: int) -> Tuple[int, int]:
     """Fight a monster and potentionally lose health
 
@@ -16,7 +14,7 @@ def fight_monster(health: int, number_of_monsters: int) -> Tuple[int, int]:
         "🦂": 5,
         "🕷️": 5,
         "🐉": 20,
-        "👽": 10 ##VOEG HIER EEN EXTRA MONSTER TOE
+        "👽": 10 ## VOEG HIER EEN EXTRA MONSTER TOE 🧛‍♂️, 🤡, 💩, 🐬, 🐸, 🦄 ...
     }
     monster, damage = random.choice(list(monsters.items()))
     print(f"🪄: je vecht met {monster} en die deelt {damage} schadepunten aan")
@@ -34,11 +32,13 @@ def fight_monster(health: int, number_of_monsters: int) -> Tuple[int, int]:
 #     if number_of_potions == XXX:
 #         print("🪄: Je hebt geen potions meer")
 #         return health, number_of_potions
-#     number_of_potions = number_of_potions - XXX
-#     health = health + POTION_HP
-#     print(f"🪄: Levenspunten ging omhoog met {POTION_HP}")
-#     return XXX, XXX
-
+#     else:
+#         potion_hp = 3
+#         new_number_of_potions = number_of_potions - XXX
+#         new_health = health + potion_hp
+#         print(f"🪄: Levenspunten ging omhoog met {potion_hp}")
+#         return XXX, XXX
+#
 # def cast_spell(number_of_monsters: int) -> int:
 #     """Cast a spell in order to half or double the number of monsters in the world
 #
@@ -46,7 +46,12 @@ def fight_monster(health: int, number_of_monsters: int) -> Tuple[int, int]:
 #     :return: the new number of monsters in the world.
 #     """
 #     print(f"[[ Cast spell called with {number_of_monsters} monsters ]]")
-#     XXX
+#     if random.random() < 0.5:
+#         print(F"🪄: ☄️ WOEHOEW HET WERKTE! ☄️ MONSTERS GEHALVEERD")
+#         XXX
+#     else:
+#         print(f"🪄: 😰️ UHOH DAT GING NIET GOED! 😰️. MONSTERS WERDEN VERDUBBELD")
+#         XXX
 
 def calculate_score(health: int, number_of_potions: int) -> int:
     """Calculate the score of the game.
