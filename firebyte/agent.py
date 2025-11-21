@@ -1,6 +1,6 @@
 from google.adk.agents.llm_agent import Agent
 
-from firebyte.firebyte_tools import calculate_score, fight_monster, drink_potion, cast_spell
+from firebyte.firebyte_tools import calculate_score, fight_monster
 
 root_agent = Agent(
     model='gemini-2.5-flash',
